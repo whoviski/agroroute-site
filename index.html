@@ -393,8 +393,39 @@
   </div>
 </section>
 
-<footer><div class="wrap">ООО «КМДРОН» · При поддержке Фонда содействия инновациям</div></footer>
+<footer>
+  <div class="wrap">
+    <div>ООО «КМДРОН» · При поддержке Фонда содействия инновациям</div>
+    <ul class="legal-links">
+      <li><a href="privacy.html">Политика конфиденциальности</a></li>
+      <li><a href="terms.html">Условия использования</a></li>
+      <li><a href="cookies.html">Политика cookie</a></li>
+      <li><button type="button" data-cookie-settings>Настройки cookie</button></li>
+    </ul>
+  </div>
+</footer>
 <div id="lb" hidden><button type="button" aria-label="Закрыть">×</button><img alt=""><p></p></div>
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
+  <div class="cookie-card">
+    <h2 id="cookie-title">Файлы cookie</h2>
+    <p id="cookie-desc">Сайт записывает в этот браузер только ваш выбор по cookie. Аналитические и маркетинговые cookie, а также внешние счётчики, не используются и не загружаются. Подробнее — в <a href="cookies.html">Политике cookie</a>.</p>
+    <div class="cookie-actions">
+      <button type="button" class="btn" id="cookie-accept">Принять все</button>
+      <button type="button" class="btn btn-ghost" id="cookie-necessary">Только необходимые</button>
+      <button type="button" class="btn btn-ghost" id="cookie-settings" aria-expanded="false" aria-controls="cookie-panel">Настроить</button>
+    </div>
+    <div id="cookie-panel" class="cookie-panel" hidden>
+      <label><input type="checkbox" checked disabled><span>Строго необходимые<small>Всегда включены. В localStorage сохраняется ключ agroroute_cookie_consent — запись о вашем выборе. На сервер оператора она не отправляется.</small></span></label>
+      <label><input id="cookie-analytics" type="checkbox"><span>Аналитические<small>На сайте не используются: скрипт аналитики не подключается ни до, ни после согласия.</small></span></label>
+      <label><input id="cookie-marketing" type="checkbox"><span>Маркетинговые<small>На сайте не используются: рекламные cookie и пиксели не подключаются.</small></span></label>
+      <button type="button" class="btn" id="cookie-save">Сохранить выбор</button>
+    </div>
+  </div>
+</div>
+<script>
+try { if (localStorage.getItem('agroroute_cookie_consent')) document.getElementById('cookie-banner').hidden = true; } catch (e) {}
+</script>
+<script src="consent.js" defer></script>
 <script src="app.js" defer></script>
 </body>
 </html>
