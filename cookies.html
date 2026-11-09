@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Политика cookie — AgroRoute</title>
+<meta name="description" content="Какие cookie, localStorage и sessionStorage использует сайт AgroRoute.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="mesh" aria-hidden="true"></div>
+<header class="legal-top"><div class="wrap"><a class="logo" href="index.html"><span class="logo-mark" aria-hidden="true"></span>AgroRoute</a></div></header>
+<main class="legal-doc">
+  <h1>Политика использования файлов cookie</h1>
+  <p class="note">Редакция от 9 ноября 2026 г.</p>
+  <p>Здесь перечислено всё, что код сайта AgroRoute сам записывает в браузер. Список сверен с кодом на 9 ноября 2026 г. Оператор — ООО «КМДРОН», ОГРН 1251600043870, ИНН 1673009111, КПП 167301001, адрес: 422500, Республика Татарстан, м.р-н Зеленодольский, г.п. пгт Нижние Вязовые, ул. Ленина, д. 31. Вопросы можно отправить на <a href="mailto:say-maklashov@mail.ru">say-maklashov@mail.ru</a>.</p>
+
+  <h2>1. Что сайт записывает</h2>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Ключ</th><th>Где хранится</th><th>Тип</th><th>Назначение</th><th>Срок</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><code>agroroute_cookie_consent</code></td>
+          <td>localStorage</td>
+          <td>строго необходимый</td>
+          <td>Запоминает выбор посетителя: необходимые, аналитические и маркетинговые категории. Значение — JSON с полями v, necessary, analytics, marketing. На сервер оператора не отправляется.</td>
+          <td>До очистки данных сайта в браузере или до нового выбора. Срок истечения у localStorage нет.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Файлов cookie код сайта не устанавливает. Ключей sessionStorage код сайта не устанавливает. Других ключей localStorage код сайта не устанавливает.</p>
+  <p>Пока посетитель не нажмёт кнопку в полосе cookie, ключ <code>agroroute_cookie_consent</code> не создаётся.</p>
+
+  <h2>2. Категории</h2>
+  <ul>
+    <li><b>Строго необходимые.</b> Только ключ <code>agroroute_cookie_consent</code>. Он нужен, чтобы запомнить выбор. Отключить его отдельно нельзя: без него сайт не отличит уже сделанный выбор от первого визита.</li>
+    <li><b>Аналитические.</b> Не используются. Счётчиков и внешних скриптов аналитики на сайте нет, и согласие их не подгружает.</li>
+    <li><b>Маркетинговые.</b> Не используются. Рекламных cookie, пикселей и рассылок на сайте нет. Согласие их не подгружает.</li>
+  </ul>
+  <p>«Принять все» сохраняет в ключе analytics и marketing со значением true. «Только необходимые» сохраняет оба со значением false. На состав загружаемых скриптов это сейчас не влияет: необязательных скриптов в проекте нет. Если такой скрипт появится, его можно будет выполнить только после проверки <code>agrorouteConsent.allows</code>.</p>
+
+  <h2>3. Как изменить выбор</h2>
+  <p>Внизу каждой страницы есть кнопка «Настройки cookie». Она снова открывает полосу с кнопками «Принять все», «Только необходимые» и «Настроить». В блоке «Настроить» можно оставить или снять отметки аналитической и маркетинговой категорий и нажать «Сохранить выбор».</p>
+  <p>Удалить запись целиком можно в настройках браузера, в данных сайта, вместе с localStorage. После удаления полоса показывается снова.</p>
+
+  <h2>4. Хостинг</h2>
+  <p>Запрос страницы обслуживает GitHub Pages. Это обращение браузера к хостингу, а не cookie сайта. Какие технические данные при этом получает GitHub, написано в <a href="privacy.html">Политике конфиденциальности</a>.</p>
+</main>
+<footer>
+  <div class="wrap">
+    <div>ООО «КМДРОН» · При поддержке Фонда содействия инновациям</div>
+    <ul class="legal-links">
+      <li><a href="privacy.html">Политика конфиденциальности</a></li>
+      <li><a href="terms.html">Условия использования</a></li>
+      <li><a href="cookies.html">Политика cookie</a></li>
+      <li><button type="button" data-cookie-settings>Настройки cookie</button></li>
+    </ul>
+  </div>
+</footer>
+<div id="cookie-banner" class="cookie-banner" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
+  <div class="cookie-card">
+    <h2 id="cookie-title">Файлы cookie</h2>
+    <p id="cookie-desc">Сайт записывает в этот браузер только ваш выбор по cookie. Аналитические и маркетинговые cookie, а также внешние счётчики, не используются и не загружаются. Подробнее — в <a href="cookies.html">Политике cookie</a>.</p>
+    <div class="cookie-actions">
+      <button type="button" class="btn" id="cookie-accept">Принять все</button>
+      <button type="button" class="btn btn-ghost" id="cookie-necessary">Только необходимые</button>
+      <button type="button" class="btn btn-ghost" id="cookie-settings" aria-expanded="false" aria-controls="cookie-panel">Настроить</button>
+    </div>
+    <div id="cookie-panel" class="cookie-panel" hidden>
+      <label><input type="checkbox" checked disabled><span>Строго необходимые<small>Всегда включены. В localStorage сохраняется ключ agroroute_cookie_consent — запись о вашем выборе. На сервер оператора она не отправляется.</small></span></label>
+      <label><input id="cookie-analytics" type="checkbox"><span>Аналитические<small>На сайте не используются: скрипт аналитики не подключается ни до, ни после согласия.</small></span></label>
+      <label><input id="cookie-marketing" type="checkbox"><span>Маркетинговые<small>На сайте не используются: рекламные cookie и пиксели не подключаются.</small></span></label>
+      <button type="button" class="btn" id="cookie-save">Сохранить выбор</button>
+    </div>
+  </div>
+</div>
+<script>
+try { if (localStorage.getItem('agroroute_cookie_consent')) document.getElementById('cookie-banner').hidden = true; } catch (e) {}
+</script>
+<script src="consent.js" defer></script>
+</body>
+</html>
