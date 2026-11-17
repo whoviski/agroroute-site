@@ -564,3 +564,15 @@ main.legal-doc {
   .steps:before, .js .steps:before, .js .reveal.in .steps:before { transform: none !important; }
   #field-svg .obs { animation: none !important; }
 }
+
+/* Official FASIE support logo */
+.support-fasie{display:flex;flex-wrap:wrap;gap:22px 28px;align-items:center}
+.support-fasie .fund{flex:1 1 260px;margin:0}
+.fasie-logo-link{display:inline-flex;align-items:center;gap:12px;color:inherit;text-decoration:none;max-width:100%}
+.fasie-logo{display:block;width:min(100%,240px);height:auto;border-radius:12px;transition:transform .25s ease,box-shadow .25s ease}
+.fasie-logo-link:hover .fasie-logo,.fasie-logo-link:focus-visible .fasie-logo{transform:translateY(-3px);box-shadow:0 12px 28px color-mix(in srgb,var(--a) 35%,transparent)}
+.footer-support{display:flex;flex-wrap:wrap;gap:16px 24px;align-items:center}
+.footer-support .fasie-logo{width:min(100%,200px)}
+.footer-support .footer-links,.footer-support .legal-links,.footer-support .legal-nav{flex:1 1 100%}
+@media(max-width:800px){.support-fasie{flex-direction:column;align-items:flex-start}.footer-support{align-items:flex-start}}
+@media(prefers-reduced-motion:reduce){.fasie-logo,.fasie-logo-link:hover .fasie-logo,.fasie-logo-link:focus-visible .fasie-logo{transition:none;transform:none;box-shadow:none}}
